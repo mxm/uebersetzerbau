@@ -7,10 +7,15 @@ import lombok.Getter;
 import parser.Attribute;
 import parser.ISyntaxTree;
 import semantic.analysis.SymbolTable;
-import semantic.analysis.SymbolTable;
 import utils.StringUtils;
 
 public abstract class Tree implements ISyntaxTree {
+
+	/**
+	 * This is the current valid symbol table, which provides information to all
+	 * symbols valid for the current scope
+	 */
+	protected SymbolTable symbolTable;
 
 	public enum DefaultAttribute {
 		TokenValue

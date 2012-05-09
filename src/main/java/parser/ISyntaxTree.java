@@ -3,7 +3,6 @@ package parser;
 import java.util.List;
 
 import semantic.analysis.SymbolTable;
-import semantic.analysis.SymbolTableStack;
 
 /**
  * Using composite pattern as tree data-structure. Leafs are indicated by a

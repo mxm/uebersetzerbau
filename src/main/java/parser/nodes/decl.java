@@ -3,7 +3,6 @@ package parser.nodes;
 import lexer.IToken.TokenType;
 import semantic.analysis.SemanticException;
 import semantic.analysis.SymbolTable;
-import semantic.analysis.SymbolTable;
 
 public class decl extends Tree {
 

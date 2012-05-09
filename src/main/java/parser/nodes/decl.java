@@ -2,7 +2,8 @@ package parser.nodes;
 
 import lexer.IToken.TokenType;
 import semantic.analysis.SemanticException;
-import semantic.analysis.SymbolTableStack;
+import semantic.analysis.SymbolTable;
+import semantic.analysis.SymbolTable;
 
 public class decl extends Tree {
 
@@ -27,11 +28,11 @@ public class decl extends Tree {
 	}
 
 	@Override
-	public void run(SymbolTableStack tables) {
+	public void run(SymbolTable table) {
 		init();
 
 		try {
-			tables.top().insertEntry(idTree.getLexeme(), typeTree.getType());
+			table.insertEntry(idTree.getLexeme(), typeTree.getType());
 		} catch (IllegalStateException e) {
 			throw new SemanticException(e.toString());
 		}

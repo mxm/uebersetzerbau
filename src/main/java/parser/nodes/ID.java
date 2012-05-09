@@ -1,7 +1,7 @@
 package parser.nodes;
 
 import lombok.Getter;
-import semantic.analysis.SymbolTableStack;
+import semantic.analysis.SymbolTable;
 
 
 public class ID extends expr {
@@ -14,7 +14,7 @@ public class ID extends expr {
 	}
 
 	@Override
-	public void run(SymbolTableStack tables) {
+	public void run(SymbolTable table) {
 		Object value = getAttribute(DefaultAttribute.TokenValue.name()).getValue();
 		this.lexeme = (String)value;
 	}

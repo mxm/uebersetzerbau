@@ -2,15 +2,25 @@ package semantic.analysis;
 
 import java.util.HashMap;
 
+import lombok.Getter;
+
 /**
  * @author Christian Cikryt
  */
 public class SymbolTable {
+	
+	@Getter
+	private SymbolTable parent; 
 
 	private HashMap<String, Object> hashMap;
 
 	public SymbolTable() {
 		hashMap = new HashMap<String, Object>();
+	}
+	
+	public SymbolTable(SymbolTable parent){
+		this();
+		this.parent = parent;
 	}
 
 	/**

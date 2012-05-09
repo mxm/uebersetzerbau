@@ -1,7 +1,7 @@
 package parser.nodes;
 
 import lexer.IToken.TokenType;
-import semantic.analysis.SymbolTableStack;
+import semantic.analysis.SymbolTable;
 
 public class ConstantTree extends expr {
 	
@@ -14,7 +14,7 @@ public class ConstantTree extends expr {
 	}
 
 	@Override
-	public void run(SymbolTableStack tables) {
+	public void run(SymbolTable table) {
 	}
 
 }

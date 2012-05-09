@@ -2,7 +2,7 @@ package parser.nodes;
 
 import lexer.IToken.TokenType;
 import lombok.Getter;
-import semantic.analysis.SymbolTableStack;
+import semantic.analysis.SymbolTable;
 
 public class type extends Tree {
 
@@ -14,7 +14,7 @@ public class type extends Tree {
 	}
 
 	@Override
-	public void run(SymbolTableStack tables) {
+	public void run(SymbolTable table) {
 		Object value = getAttribute(DefaultAttribute.TokenValue.name());
 		this.type = (TokenType) value;
 	}

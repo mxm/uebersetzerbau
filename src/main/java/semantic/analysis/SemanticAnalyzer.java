@@ -5,11 +5,11 @@ import parser.ISyntaxTree;
 public class SemanticAnalyzer {
 
 	private ISyntaxTree tree;
-	private SymbolTableStack tables;
+	private SymbolTable table;
 
 	public SemanticAnalyzer(ISyntaxTree tree) {
 		this.tree = tree;
-		tables = new SymbolTableStack();
+		table = new SymbolTable(null);
 	}
 	
 	public void analyze() throws SemanticException {
@@ -27,7 +27,7 @@ public class SemanticAnalyzer {
 			parseTreeForSemanticActions(tree.getChild(i));
 		}
 
-		tree.run(tables);
+		tree.run(table);
 	}
 
 	/**

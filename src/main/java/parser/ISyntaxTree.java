@@ -2,6 +2,7 @@ package parser;
 
 import java.util.List;
 
+import semantic.analysis.SymbolTable;
 import semantic.analysis.SymbolTableStack;
 
 /**
@@ -63,5 +64,5 @@ public interface ISyntaxTree {
 	/**
 	 * Semantic rules !
 	 */
-	public void run(SymbolTableStack tables);
+	public void run(SymbolTable tables);
 }

@@ -6,7 +6,8 @@ import java.util.List;
 import lombok.Getter;
 import parser.Attribute;
 import parser.ISyntaxTree;
-import semantic.analysis.SymbolTableStack;
+import semantic.analysis.SymbolTable;
+import semantic.analysis.SymbolTable;
 import utils.StringUtils;
 
 public abstract class Tree implements ISyntaxTree {
@@ -123,6 +124,6 @@ public abstract class Tree implements ISyntaxTree {
 	}
 
 	@Override
-	public abstract void run(SymbolTableStack tables);
+	public abstract void run(SymbolTable table);
 
 }
